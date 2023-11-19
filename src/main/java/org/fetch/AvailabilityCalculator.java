@@ -26,11 +26,15 @@ public class AvailabilityCalculator {
         domainAvailabilityMap.put(domain, numberOfUps);
     }
 
+    public long getAvailability(String domain, int numberOfUps) {
+        double availabilityDouble = 100.0 * (double) numberOfUps / requestsCounterMap.get(domain);
+        return Math.round(availabilityDouble);
+    }
+
     public void logAvailability() {
         for (Map.Entry<String, Integer> entry: domainAvailabilityMap.entrySet()) {
-            double availabilityDouble = 100.0 * (double) entry.getValue() / requestsCounterMap.get(entry.getKey());
-            long availability = Math.round(availabilityDouble);
-            System.out.println(entry.getKey() + " has " + availability + "% availability percentage");
+            System.out.println(entry.getKey() + " has " + getAvailability(entry.getKey(), entry.getValue())
+                    + "% availability percentage");
         }
         System.out.println();
     }

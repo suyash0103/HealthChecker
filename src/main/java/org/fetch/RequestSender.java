@@ -75,8 +75,8 @@ public class RequestSender {
 
             long endTime = System.currentTimeMillis();
             long latency = endTime - startTime;
-//            System.out.println(Utils.getDomain(request.getUrl())
-//                    + " " + latency + " " + responseCode + " " + Utils.isDomainUp(latency, responseCode));
+            System.out.println(Utils.getDomain(request.getUrl())
+                    + " " + latency + " " + responseCode + " " + Utils.isDomainUp(latency, responseCode));
 
             availabilityCalculator.updateAvailability(Utils.getDomain(request.getUrl()),
                     Utils.isDomainUp(latency, responseCode));
