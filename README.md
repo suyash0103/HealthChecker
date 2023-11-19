@@ -18,10 +18,10 @@ If you have downloaded jdk from the above website, follow these instructions to 
     b. Use a text editor (like nano or vim) or open your shell's profile file (~/.bash_profile, ~/.bashrc, or ~/.zshrc).  
     c. Add the following line:  
         `export JAVA_HOME=/path/to/your/jdk-21.0.1.jdk/Contents/Home`  
-        Replace /path/to/your/jdk-21.0.1.jdk/Contents/Home with the actual path to the extracted JDK directory. Save the file and exit the editor. Run source ~/.bash_profile (or the respective profile file) to apply the changes to the current terminal session.
+        Replace `/path/to/your/jdk-21.0.1.jdk/Contents/Home` with the actual path to the extracted JDK directory. Save the file and exit the editor. Run `source ~/.bash_profile` (or the respective profile file) to apply the changes to the current terminal session.
 3. Verify Java Installation:  
     a. Open a new terminal window or tab.  
-    b. java -version  
+    b. `java -version`  
   It should display the installed Java version (21.0.1).
 
 ### For Windows Users
@@ -41,7 +41,7 @@ If you have downloaded jdk from the above website, follow these instructions to 
     b. Add %JAVA_HOME%\bin to the list of paths.  
     c. Click "OK" to save changes.  
 6. Verify Java Installation:  
-    a. Open cmd. Type this: java -version. It should display the installed Java version (21.0.1).
+    a. Open cmd. Type this: `java -version`. It should display the installed Java version (21.0.1).
 
 ## Installing Maven
 ### For Linux Users
