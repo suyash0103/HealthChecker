@@ -1,6 +1,6 @@
 # HealthChecker
 
-This repo contains code that reads a YAML file and performs certain actions based on the file. The code is written in Java. The YAML file defines http requests with parameters such as URL, Body, Method, Headers, etc. The set of requests are sent every 15 seconds, and availability of the domains is calculated based on a certain formula.
+This repo contains code that reads a YAML file and performs certain actions based on the file. The code is written in ***Java***. The ***YAML has to be valid***, or else the code with throw an exception. The YAML file defines http requests with parameters such as URL, Body, Method, Headers, etc. The set of requests are sent every 15 seconds, and the availability of the domains is calculated based on a certain formula.
 
 ## Prerequisites
 1. Java JDK (openjdk-21 Oracle OpenJDK version 21.0.1)
