@@ -54,19 +54,19 @@ If you have downloaded jdk from the above website, follow these instructions to 
 
 ### For macOS Users (using Homebrew)
 1. Open Terminal.
-2. Run the following command:
-   a. brew install maven
+2. Run the following command:  
+   a. `brew install maven`
 
 ### For Windows Users (using Chocolatey)
 1. Open Command Prompt or PowerShell as Administrator.
-2. Run the following command:
-   a. choco install maven
+2. Run the following command:  
+   a. `choco install maven`
 
 ## Cloning the Repository
 
 Clone this repository to your local machine:
-1. git clone https://github.com/suyash0103/HealthChecker.git
-2. cd HealthChecker
+1. `git clone https://github.com/suyash0103/HealthChecker.git`  
+2. `cd HealthChecker`
 
 ## Building and Running the Application
 
