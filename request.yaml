@@ -1,0 +1,12 @@
+---
+- name: get robots
+  url: https://api.ngr.ai/robots?ngr_warehouse_id=1
+- name: ngr website
+  method: GET
+  url: https://ngr.ai/
+- headers:
+    Content-Type: application/json
+  method: POST
+  name: create robots
+  url: https://api.ngr.ai/robots/
+  body: '[{"robot_identifier": "id", "robot_description": "desc", "speed": "1.0", "ngr_fleet_id": 1}]'
