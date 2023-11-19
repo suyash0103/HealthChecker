@@ -48,9 +48,9 @@ If you have downloaded jdk from the above website, follow these instructions to 
 ## Installing Maven
 ### For Linux Users
 1. Open Terminal.
-2. Run the following commands:
-   a. sudo apt update
-   b. sudo apt install maven
+2. Run the following commands:  
+   a. `sudo apt update`  
+   b. `sudo apt install maven`
 
 ### For macOS Users (using Homebrew)
 1. Open Terminal.
@@ -73,7 +73,7 @@ Clone this repository to your local machine:
 After installing Maven and cloning navigate to the project directory in your terminal or command prompt.
 
 Run the following commands:  
-`mvn clean compile`
+`mvn clean compile`  
 `mvn exec:java -Dexec.mainClass="org.fetch.Main" -Dexec.args="./request.yaml"`
 
 The request.yaml files includes a set of apis that were developed by me. If you want to replace these apis with a different set of apis, please update the request.yaml file. Also, if you want to move the request.yaml file to some other location in your system, feel free to do so, just update the file path in the -Dexec.args argument.
