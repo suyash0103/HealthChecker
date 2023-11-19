@@ -12,13 +12,9 @@ import java.util.concurrent.TimeUnit;
 
 public class RequestSender {
 
-    // Maintain the number of times an HTTP request was sent to a domain
-//    private static Map<String, Integer> requestsCounterMap;
-
     private final AvailabilityCalculator availabilityCalculator;
 
     public RequestSender() {
-//        requestsCounterMap = new HashMap<>();
         availabilityCalculator = new AvailabilityCalculator();
     }
 

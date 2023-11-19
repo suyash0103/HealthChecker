@@ -8,6 +8,7 @@ public class AvailabilityCalculator {
     // Maintain the number of times a domain was UP
     private Map<String, Integer> domainAvailabilityMap;
 
+    // Maintain the number of times an HTTP request was sent to a domain
     private Map<String, Integer> requestsCounterMap;
 
     public AvailabilityCalculator() {
