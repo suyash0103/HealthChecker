@@ -7,7 +7,9 @@ This repo contains code that reads a YAML file and performs certain actions base
 2. Maven (Apache Maven 3.9.5)
 
 ## Installing OpenJDK 21
-I recommend installing IntelliJ IDEA and using the OpenJDK 21 21.0.1 version for your system. That is the easiest way to use open jdk. An alternative to this is to go to this website: https://jdk.java.net/21/, and install the correct version as per your system.
+I recommend installing IntelliJ IDEA and using the OpenJDK 21 21.0.1 version for your system. That is the easiest way to use open jdk. To use open jdk 21 in IntelliJ, Go to File -> Project Structure -> SDKs, and click the + icon on top left. (These are the steps are for MacOS, similar steps can be followed for Windows and Ubuntu).
+
+An alternative to this is to go to this website: https://jdk.java.net/21/, and install the correct version as per your system.
 
 If you have downloaded jdk from the above website, follow these instructions to update Java variable:
 
