@@ -18,7 +18,7 @@ public class AvailabilityCalculatorTest {
     }
 
     @Test
-    public void testAvailabilityCalculation() throws InterruptedException {
+    public void testAvailabilityCalculation() {
         Request request1 = Mockito.mock(Request.class);
         Request request2 = Mockito.mock(Request.class);
 
