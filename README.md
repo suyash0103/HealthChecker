@@ -77,3 +77,9 @@ Run the following commands:
 `mvn exec:java -Dexec.mainClass="org.fetch.Main" -Dexec.args="./request.yaml"`
 
 The request.yaml files includes a set of apis that were developed by me. If you want to replace these apis with a different set of apis, please update the request.yaml file. Also, if you want to move the request.yaml file to some other location in your system, feel free to do so, just update the file path in the -Dexec.args argument.
+
+## Testing
+
+To run the tests:
+1. `cd HealthChecker`
+2. `mvn test`
