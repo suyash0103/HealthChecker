@@ -15,9 +15,11 @@ public class Main {
         }
 
         Parser parser = new Parser();
+        // Get the list of requests present in the yaml file
         List<Request> requestList = parser.parseYAML(args[0]);
         if (requestList != null) {
             RequestSender requestSender = new RequestSender();
+            // Send the requests
             requestSender.sendRequests(requestList);
         }
     }

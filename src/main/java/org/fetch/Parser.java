@@ -12,6 +12,7 @@ import java.util.List;
 
 public class Parser {
 
+    // Parse a valid YAML file
     public List<Request> parseYAML(String filePath) {
         try {
             ObjectMapper objectMapper = new ObjectMapper(new YAMLFactory());

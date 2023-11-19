@@ -12,19 +12,22 @@ import java.util.concurrent.TimeUnit;
 
 public class RequestSender {
 
-    private static Map<String, Integer> requestsCounterMap;
+    // Maintain the number of times an HTTP request was sent to a domain
+//    private static Map<String, Integer> requestsCounterMap;
 
     private final AvailabilityCalculator availabilityCalculator;
 
     public RequestSender() {
-        requestsCounterMap = new HashMap<>();
+//        requestsCounterMap = new HashMap<>();
         availabilityCalculator = new AvailabilityCalculator();
     }
 
     public void sendRequests(List<Request> requestList) {
         while(true) {
+            // Thread pool with size of requestList list
             ExecutorService executorService = Executors.newFixedThreadPool(requestList.size());
 
+            // Run the sendRequest function for every thread
             for (Request request : requestList) {
                 executorService.submit(() -> sendRequest(request));
             }
@@ -37,8 +40,9 @@ public class RequestSender {
                 Thread.currentThread().interrupt();
             }
 
-            availabilityCalculator.logAvailability(requestsCounterMap);
+            availabilityCalculator.logAvailability();
 
+            // Wait for 15 seconds before sending next round of requests
             try {
                 TimeUnit.SECONDS.sleep(Constants.requestSenderTimeout);
             } catch (InterruptedException e) {
@@ -75,14 +79,11 @@ public class RequestSender {
 
             long endTime = System.currentTimeMillis();
             long latency = endTime - startTime;
+//            System.out.println(Utils.getDomain(request.getUrl())
+//                    + " " + latency + " " + responseCode + " " + Utils.isDomainUp(latency, responseCode));
 
-            String domain = Utils.getDomain(request.getUrl());
-            int requestsSent = requestsCounterMap.getOrDefault(domain, 0);
-            requestsSent++;
-            requestsCounterMap.put(domain, requestsSent);
-//            System.out.println(domain + " " + latency + " " + responseCode + " " + Utils.isDomainUp(latency, responseCode));
-
-            availabilityCalculator.updateAvailability(domain, Utils.isDomainUp(latency, responseCode));
+            availabilityCalculator.updateAvailability(Utils.getDomain(request.getUrl()),
+                    Utils.isDomainUp(latency, responseCode));
 
             connection.disconnect();
         } catch (Exception e) {
